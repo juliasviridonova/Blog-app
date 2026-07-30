@@ -56,12 +56,7 @@ newPostBtnNode.addEventListener('click', function() {
   titleErrorNode.style.display = 'none';
   textErrorNode.style.display = 'none';
 
-  postTitleInputNode.focus();
-  postTitleInputNode.classList.add('is-focused');
-
-  setTimeout(() => {
-    postTitleInputNode.classList.remove('is-focused');
-  }, 1000);
+  
 });
 
 // --- 4. ЛОГИКА СОЗДАНИЯ/ОБНОВЛЕНИЯ ПОСТА ---
