@@ -11,42 +11,36 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="wrapper">
+        
+        <!-- Карточка для создания поста (теперь это один блок) -->
+        <div class="card">
+            <h2>Новый пост</h2>
 
-    <h1>Приложение блог</h1>
-    <div class="row">
-        <div class="col">
-            <div class="wrapper">
-                <h2>Новый пост</h2>
-    
-                <input class="js-post-title-input post-title-input" type="text" placeholder="Заголовок">
-                
-    
-                <textarea class="js-post-text-input post-text-input" type="text" placeholder="Напиши пост"></textarea>
-                
-
-                <button class="js-new-post-btn new-post-btn">
+            <input class="js-post-title-input post-title-input" type="text" placeholder="Заголовок поста">
+            
+            <textarea class="js-post-text-input post-text-input" placeholder="Напиши текст поста..."></textarea>
+            
+            <button class="js-new-post-btn new-post-btn">
                 Опубликовать
-                </button>
+            </button>
 
-                <div class="js-title-error title-error">
+            <div class="js-title-error title-error">
                 Заголовок больше 100 символов
-                </div>
+            </div>
 
-                <div class="js-text-error text-error">
-                Пост больше 200 символов</div>
+            <div class="js-text-error text-error">
+                Пост больше 200 символов
             </div>
         </div>
 
-        <div class="col">
-            <h2>Лента</h2>
-            <div class="js-posts posts">
-                <p class="post">Лента пуста....</p>
-            </div>
+        <!-- Лента постов -->
+        <h2 class="section-title">Лента</h2>
+        <div class="js-posts posts">
+            <p class="post">Лента пуста....</p>
         </div>
     </div>
 
-    
-    
     
 
     <script src="index.js"></script>

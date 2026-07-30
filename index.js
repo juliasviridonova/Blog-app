@@ -10,7 +10,6 @@ const textErrorNode = document.querySelector('.js-text-error');// сообщен
 newPostBtnNode.addEventListener('click', function(){
    const postFromUser = getPostFromUser();
 
-   // Если пост не создан (из‑за ошибки), прерываем выполнение
   if (!postFromUser) {
     return;
   }
@@ -18,6 +17,18 @@ newPostBtnNode.addEventListener('click', function(){
    addPost(postFromUser);
 
    renderPosts();
+   postTitleInputNode.value = '';
+   postTextInputNode.value = '';
+   titleErrorNode.style.display = 'none';
+   textErrorNode.style.display = 'none';
+
+   postTitleInputNode.focus();
+
+   postTitleInputNode.classList.add('is-focused');
+
+   setTimeout(() => {
+      postTitleInputNode.classList.remove('is-focused');
+   }, 1000);
 });
 
 function getPostFromUser() {
@@ -27,19 +38,18 @@ function getPostFromUser() {
    // Проверка длины заголовка
   if (title.length > 100) {
     titleErrorNode.style.display = 'block';
-    return null; // не возвращаем пост, если заголовок слишком длинный
+    return null; //
   }
 
-  titleErrorNode.style.display = 'none'; // скрываем ошибку, если всё в порядке
+  titleErrorNode.style.display = 'none';
 
-   //добавила
+  
   if (text.length > 200) {
    textErrorNode.style.display = 'block';
-   return null; // добавила не возвращаем пост, если заголовок слишком длинный
+   return null; 
   }
 
-  textErrorNode.style.display = 'none'; // добавила скрываем ошибку, если всё в порядке
-
+  textErrorNode.style.display = 'none'; 
    return {
       title: title,
       text: text,
@@ -48,7 +58,7 @@ function getPostFromUser() {
 }
 
 function addPost({ title, text, date }) {
-   posts.push({
+   posts.unshift({
       title,
       text,
       date
