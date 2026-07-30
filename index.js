@@ -81,10 +81,12 @@ function getPostFromUser() {
   }
   textErrorNode.style.display = 'none';
 
+  const dateString = new Date().toLocaleString('ru-RU');
+
   return {
     title: title,
     text: text,
-    date: new Date()
+    date: dateString
   };
 }
 
