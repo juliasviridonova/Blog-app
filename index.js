@@ -56,7 +56,11 @@ newPostBtnNode.addEventListener('click', function() {
   titleErrorNode.style.display = 'none';
   textErrorNode.style.display = 'none';
 
-  
+  postTitleInputNode.classList.add('is-focused'); // анимация есть
+
+   setTimeout(() => {
+      postTitleInputNode.classList.remove('is-focused'); // через 1 сек анимация пропадает
+   }, 1000);
 });
 
 // --- 4. ЛОГИКА СОЗДАНИЯ/ОБНОВЛЕНИЯ ПОСТА ---
