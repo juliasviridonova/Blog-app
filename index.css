@@ -66,7 +66,7 @@ h2 {
   box-shadow: 0 0 0 3px rgba(0, 148, 255, 0.1);
 }
 
-.post-title-input:is-focus {
+.post-title-input:is-focused {
   border-color: #0094FF !important;
   box-shadow: 0 0 8px rgba(0, 148, 255, 0.3);
   animation: pulse-soft 1s ease-in-out;
@@ -149,6 +149,48 @@ h2 {
   font-size: 15px;
   line-height: 1.5;
   margin: 0;
+}
+
+.post-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* Кнопка редактирования */
+.btn-edit {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+/* Кнопка удаления */
+.btn-delete {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #ffcdd2;
+  border-color: #ef5350;
 }
 
 
